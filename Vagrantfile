@@ -62,6 +62,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         chgrp www-data /var/www/files
         chmod 2775 /var/www/files
         mount -o bind /var/www/files /var/www/html/sites/default/files
+        cp /var/www/html/sites/default/settings.vagrant.php /var/www/html/sites/default/settings.local.php
     SHELL
 
     # Add defined SSH public key to vagrant user's authorized_keys
