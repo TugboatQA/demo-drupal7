@@ -20,7 +20,7 @@ importfiles:
 	rsync -av --delete /tmp/files/ /var/www/html/sites/default/files/
 
 build:
-	drush -r /var/www/html cache-rebuild
+	drush -r /var/www/html cache-clear all
 
 cleanup:
 	apt-get clean
