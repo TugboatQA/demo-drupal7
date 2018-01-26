@@ -1,6 +1,8 @@
 packages:
 	apt-get update
 	apt-get install -y mysql-client rsync
+	curl -L "https://github.com/drush-ops/drush/releases/download/8.1.15/drush.phar" -O /usr/local/bin/drush
+	chmod +x /usr/local/bin/drush
 
 drupalconfig:
 	cp /var/www/html/sites/default/settings.tugboat.php /var/www/html/sites/default/settings.local.php
