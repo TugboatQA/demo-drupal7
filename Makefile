@@ -1,7 +1,7 @@
 packages:
 	apt-get update
 	apt-get install -y mysql-client rsync
-	curl -L "https://github.com/drush-ops/drush/releases/download/8.1.15/drush.phar" -O /usr/local/bin/drush
+	curl -L "https://github.com/drush-ops/drush/releases/download/8.1.15/drush.phar" > /usr/local/bin/drush
 	chmod +x /usr/local/bin/drush
 
 drupalconfig:
