@@ -9,11 +9,11 @@ createdb:
 	mysql -h mysql -u tugboat -ptugboat -e "create database demo;"
 
 importdb:
-	curl -L "https://www.dropbox.com/s/avmxy5bn0tza3ag/demo-drupal7-database.sql.gz?dl=0" /tmp/database.sql.gz
+	curl -L "https://www.dropbox.com/s/avmxy5bn0tza3ag/demo-drupal7-database.sql.gz?dl=0" > /tmp/database.sql.gz
 	zcat /tmp/database.sql.gz | mysql -h mysql -u tugboat -ptugboat demo
 
 importfiles:
-	curl -L "https://www.dropbox.com/s/gsiqvw8g3rlu86e/demo-drupal7-files.tar.gz?dl=0" /tmp/files.tar.gz
+	curl -L "https://www.dropbox.com/s/gsiqvw8g3rlu86e/demo-drupal7-files.tar.gz?dl=0" > /tmp/files.tar.gz
 	tar -C /tmp -zxf /tmp/files.tar.gz
 	rsync -av --delete /tmp/files/ /var/www/html/sites/default/files/
 
