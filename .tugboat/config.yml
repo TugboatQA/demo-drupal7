@@ -11,8 +11,8 @@ services:
                 - cp "${DOCROOT}/sites/default/settings.tugboat.php" "${DOCROOT}/sites/default/settings.local.php"
             update:
                 - curl -L "https://www.dropbox.com/s/gsiqvw8g3rlu86e/demo-drupal7-files.tar.gz?dl=0" > /tmp/files.tar.gz
-            	- tar -C /tmp -zxf /tmp/files.tar.gz
-            	- rsync -av --delete /tmp/files/ /var/www/html/sites/default/files/
+                - tar -C /tmp -zxf /tmp/files.tar.gz
+                - rsync -av --delete /tmp/files/ /var/www/html/sites/default/files/
                 - rm -rf /tmp/files /tmp/files.tar.gz
             build:
                 - drush -r "${DOCROOT}" cache-clear all
