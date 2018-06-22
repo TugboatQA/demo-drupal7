@@ -14,6 +14,7 @@ services:
                 - rsync -av --delete /tmp/files/ /var/www/html/sites/default/files/
                 - rm -rf /tmp/files /tmp/files.tar.gz
                   #- drush -r "${DOCROOT}" cache-rebuild
+                - docker-php-ext-install pdo_mysql
 
     mysql:
         image: tugboatqa/mysql:5
