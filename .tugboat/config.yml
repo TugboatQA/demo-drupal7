@@ -16,7 +16,7 @@ services:
                   #- drush -r "${DOCROOT}" cache-rebuild
 
     mysql:
-        image: tugboatqa/mysql
+        image: tugboatqa/mysql:5
         commands:
             init:
                 - curl -L "https://www.dropbox.com/s/avmxy5bn0tza3ag/demo-drupal7-database.sql.gz?dl=0" > /tmp/database.sql.gz
