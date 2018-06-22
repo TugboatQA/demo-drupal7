@@ -13,7 +13,7 @@ services:
                 - tar -C /tmp -zxf /tmp/files.tar.gz
                 - rsync -av --delete /tmp/files/ /var/www/html/sites/default/files/
                 - rm -rf /tmp/files /tmp/files.tar.gz
-                - drush -r "${DOCROOT}" cache-rebuild
+                  #- drush -r "${DOCROOT}" cache-rebuild
 
     mysql:
         image: tugboatqa/mysql
