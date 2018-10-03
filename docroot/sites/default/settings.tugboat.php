@@ -4,7 +4,7 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => 'demo',
+      'database' => 'tugboat',
       'username' => 'tugboat',
       'password' => 'tugboat',
       'host' => 'mysql',
